@@ -55,9 +55,9 @@ namespace ArenasProyect3.Modulos.Comercial
             this.cboCriterioBusqueda = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.Hasta = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Desde = new System.Windows.Forms.DateTimePicker();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.cboBusqueda = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -77,6 +77,7 @@ namespace ArenasProyect3.Modulos.Comercial
             this.btnReporteLiquidaciones = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnGenerarReportesPowerBi = new System.Windows.Forms.PictureBox();
             this.panelMovimientoFrm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAtudaFormularioArena)).BeginInit();
@@ -91,6 +92,7 @@ namespace ArenasProyect3.Modulos.Comercial
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenerarReportesPowerBi)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMovimientoFrm
@@ -134,6 +136,7 @@ namespace ArenasProyect3.Modulos.Comercial
             // panelReportesRequerimiento
             // 
             this.panelReportesRequerimiento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelReportesRequerimiento.Controls.Add(this.btnGenerarReportesPowerBi);
             this.panelReportesRequerimiento.Controls.Add(this.label8);
             this.panelReportesRequerimiento.Controls.Add(this.label7);
             this.panelReportesRequerimiento.Controls.Add(this.label2);
@@ -230,9 +233,9 @@ namespace ArenasProyect3.Modulos.Comercial
             this.groupBox2.Controls.Add(this.cboCriterioBusqueda);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.Hasta);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.Desde);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.cboBusqueda);
             this.groupBox2.Controls.Add(this.checkBox1);
@@ -369,14 +372,14 @@ namespace ArenasProyect3.Modulos.Comercial
             this.label1.TabIndex = 1999;
             this.label1.Text = "Busqueda por";
             // 
-            // dateTimePicker2
+            // Hasta
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(453, 86);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(103, 22);
-            this.dateTimePicker2.TabIndex = 2006;
+            this.Hasta.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Hasta.Location = new System.Drawing.Point(453, 86);
+            this.Hasta.Name = "Hasta";
+            this.Hasta.Size = new System.Drawing.Size(103, 22);
+            this.Hasta.TabIndex = 2006;
             // 
             // label6
             // 
@@ -389,14 +392,14 @@ namespace ArenasProyect3.Modulos.Comercial
             this.label6.Text = "Responsable";
             this.label6.Visible = false;
             // 
-            // dateTimePicker1
+            // Desde
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(453, 60);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(103, 22);
-            this.dateTimePicker1.TabIndex = 2005;
+            this.Desde.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Desde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Desde.Location = new System.Drawing.Point(453, 60);
+            this.Desde.Name = "Desde";
+            this.Desde.Size = new System.Drawing.Size(103, 22);
+            this.Desde.TabIndex = 2005;
             // 
             // checkBox2
             // 
@@ -673,6 +676,20 @@ namespace ArenasProyect3.Modulos.Comercial
             this.label4.TabIndex = 53;
             this.label4.Text = "Reportes del Área Comercial";
             // 
+            // btnGenerarReportesPowerBi
+            // 
+            this.btnGenerarReportesPowerBi.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGenerarReportesPowerBi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerarReportesPowerBi.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarReportesPowerBi.Image")));
+            this.btnGenerarReportesPowerBi.Location = new System.Drawing.Point(590, 433);
+            this.btnGenerarReportesPowerBi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGenerarReportesPowerBi.Name = "btnGenerarReportesPowerBi";
+            this.btnGenerarReportesPowerBi.Size = new System.Drawing.Size(30, 30);
+            this.btnGenerarReportesPowerBi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnGenerarReportesPowerBi.TabIndex = 2021;
+            this.btnGenerarReportesPowerBi.TabStop = false;
+            this.btnGenerarReportesPowerBi.Click += new System.EventHandler(this.btnGenerarReportesPowerBi_Click);
+            // 
             // ReportesComercial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -704,6 +721,7 @@ namespace ArenasProyect3.Modulos.Comercial
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnGenerarReportesPowerBi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -732,9 +750,9 @@ namespace ArenasProyect3.Modulos.Comercial
         private System.Windows.Forms.ComboBox cboCriterioBusqueda;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker Hasta;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Desde;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.ComboBox cboBusqueda;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -754,5 +772,6 @@ namespace ArenasProyect3.Modulos.Comercial
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox btnGenerarReportesPowerBi;
     }
 }
